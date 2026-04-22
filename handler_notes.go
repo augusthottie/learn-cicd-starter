@@ -16,13 +16,13 @@ func (cfg *apiConfig) handlerNotesGet(w http.ResponseWriter, r *http.Request, us
 		return
 	}
 
-	postsResp, err := databasePostsToPosts(posts)
-	if err != nil {
-		respondWithError(w, http.StatusInternalServerError, "Couldn't convert posts", err)
-		return
-	}
+	// postsResp, err := databasePostsToPosts(posts)
+	// if err != nil {
+	// 	respondWithError(w, http.StatusInternalServerError, "Couldn't convert posts", err)
+	// 	return
+	// }
 
-	respondWithJSON(w, http.StatusOK, postsResp)
+	// respondWithJSON(w, http.StatusOK, postsResp)
 }
 
 func (cfg *apiConfig) handlerNotesCreate(w http.ResponseWriter, r *http.Request, user database.User) {
